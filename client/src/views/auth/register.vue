@@ -3,12 +3,12 @@
     <img src="../../assets/logo.png" class="vue_logo">
     <h2>欢迎使用Vue-Chat</h2>
 
-    <div>
+    <div class="item">
         <img src="../../assets/phone.png" class="icon"/>
         <input />
     </div>
 
-    <div>
+    <div class="item">
         <img src="../../assets/password.png" class="icon" />
         <input />
     </div>
@@ -30,7 +30,6 @@ export default {
   },
 
   mounted() {
-    console.log('333333');
     this.queryData();
   },
 
@@ -71,6 +70,7 @@ export default {
 
         height: 22px;
     
+        margin-right: 10px;
     
     }
 
@@ -88,6 +88,16 @@ export default {
 
         margin-top: 50px;
     
+    }
+
+    .item {
+
+      display: flex;
+
+      align-items: center;
+
+      margin-top: 10px;
+
     }
 
 
