@@ -5,15 +5,15 @@
 
     <div class="item">
         <img src="../../assets/phone.png" class="icon"/>
-        <input />
+        <input v-model="phone" />
     </div>
 
     <div class="item">
         <img src="../../assets/password.png" class="icon" />
-        <input />
+        <input v-model="password" />
     </div>
 
-    <div class="register">注册</div>
+    <div class="register" @click="register">注册</div>
 
     <p>已有账号，去登陆</p>
 
@@ -21,23 +21,27 @@
 </template>
 
 <script>
+
+import { Toast } from 'mint-ui';
+
+
 export default {
   name: 'HelloWorld',
   data () {
     return {
-     
+        phone: '',
+        password: '',
     }
   },
 
   mounted() {
-    this.queryData();
   },
 
   methods: {
-    queryData() {
-      this.axios.get("api/person").then(res => {
-        console.log(res);
-      })
+
+    register() {
+
+
     }
   }
 
